@@ -41,7 +41,7 @@ body::before{display:none}
 .dk-br{bottom:-6vh;right:-4vw;width:min(44vw,800px);height:70vh}
 .dk-bl{bottom:-6vh;left:-5vw;width:min(40vw,760px);height:66vh}
 .dk-big{top:4vh;right:-10vw;width:min(64vw,1100px);height:96vh}
-.m-shapes{--m:url(../assets/img/deco_shapes.svg)}.m-pattern{--m:url(../assets/img/deco_pattern.svg)}.m-cubes{--m:url(../assets/img/deco_cubes.svg)}.m-maze{--m:url(../assets/img/deco_maze.svg)}
+.m-shapes{--m:url(assets/img/deco_shapes.svg)}.m-pattern{--m:url(assets/img/deco_pattern.svg)}.m-cubes{--m:url(assets/img/deco_cubes.svg)}.m-maze{--m:url(assets/img/deco_maze.svg)}
 
 /* типографика экранов */
 .slide h1{font-size:clamp(48px,min(8vw,13vh),150px)}
