@@ -171,6 +171,87 @@ SLIDES.push({
   },
 });
 
+/* ---------- РАЗМИНКА: «Молекула» → «Землетрясение» (все встают и двигаются) ---------- */
+const PERSON = c => `<g class="in"><circle cx="0" cy="-150" r="24" fill="${c}" stroke="#000" stroke-width="4"/><rect x="-26" y="-120" width="52" height="82" rx="18" fill="${c}" stroke="#000" stroke-width="4"/><g stroke="#000" stroke-width="6" stroke-linecap="round" fill="none"><path class="al" d="M-24 -108 L-38 -58"/><path class="ar" d="M24 -108 L38 -58"/><path d="M-12 -40 L-15 0 M12 -40 L15 0"/></g></g>`;
+SLIDES.push({
+  sec: 2, theme: "green", deco: "shapes:tr", time: "5 мин", top: true,
+  title: tx("Разминка: «Землетрясение»", "Сергіту: «Жер сілкінісі»"),
+  html: `
+  <div class="eyebrow"><span class="tag">${L("Разминка · все встают", "Сергіту · бәрі тұрады")}</span>${L("выходим в центр зала — играем стоя", "залдың ортасына шығамыз — тұрып ойнаймыз")}</div>
+  <h2>${L("Молекула →", "Молекула →")} <span class="hand u">${L("Землетрясение", "Жер сілкінісі")}</span></h2>
+  <div class="quake">
+    <div class="mol">
+      <div class="k">${L("Игра 1 · Молекула", "1-ойын · Молекула")}</div>
+      <div class="molnum"><i></i><i></i><i></i><i></i><b>?</b></div>
+      <div class="molcap">${L("Музыка стихла — соберитесь в группы по столько человек", "Музыка тоқтады — осынша адамнан топ құрыңыз")}</div>
+      <div class="molrounds"><i></i><i></i><i></i><i></i></div>
+      <button class="btn y roll" type="button">🎲 ${L("Число", "Сан")}</button>
+    </div>
+    <div class="card qgame">
+      <div class="qhead"><div class="k">${L("Игра 2 · Землетрясение", "2-ойын · Жер сілкінісі")}</div><button class="btn sm dk qnext" type="button">▶ ${L("Новая игра", "Жаңа ойын")}</button></div>
+      <svg class="qstage" viewBox="0 0 600 300" role="img">
+        <line x1="10" y1="282" x2="590" y2="282" stroke="#151821" stroke-width="4" stroke-linecap="round" opacity=".25"/>
+        <g class="house">
+          <path class="roofbg" d="M214 170 L300 34 L386 170 Z" fill="#FFD23F" opacity=".35"/>
+          <path class="roof" d="M214 170 L300 34 L386 170" fill="none" stroke="#000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>
+          <circle class="hands" cx="300" cy="36" r="9" fill="#FFD23F" stroke="#000" stroke-width="4"/>
+          <g class="pp pa">${PERSON("#2F5BFF")}</g><g class="pp pc">${PERSON("#2F5BFF")}</g>
+        </g>
+        <g class="pp pb">${PERSON("#FF4F7B")}</g>
+        <text class="qhint" x="300" y="150" text-anchor="middle"><tspan class="ru">3 человека = квартира + квартирант</tspan><tspan class="kz">3 адам = пәтер + пәтерші</tspan></text>
+        <text class="qlab lh" x="300" y="22" text-anchor="middle"><tspan class="ru">КВАРТИРА</tspan><tspan class="kz">ПӘТЕР</tspan></text>
+        <text class="qlab lt" x="300" y="304" text-anchor="middle"><tspan class="ru">КВАРТИРАНТ</tspan><tspan class="kz">ПӘТЕРШІ</tspan></text>
+      </svg>
+      <div class="qsteps">
+        <div class="qs"><b>1</b>${L("Встали по трое", "Үшеуден тұрдық")}</div>
+        <div class="qs"><b>2</b>${L("Двое взялись за руки над головой — это <u>квартира</u>", "Екеуі басынан жоғары қол ұстасты — бұл <u>пәтер</u>")}</div>
+        <div class="qs"><b>3</b>${L("Третий встал между ними — это <u>квартирант</u>", "Үшіншісі ортасына тұрды — бұл <u>пәтерші</u>")}</div>
+      </div>
+      <div class="qrules">
+        <button type="button" class="qr" data-m="house"><strong class="cmd">«${L("Квартира!", "Пәтер!")}»</strong>${L("Квартиранты стоят. Квартиры, не разнимая рук, бегут к новому жильцу", "Пәтершілер тұрады. Пәтерлер қолын ажыратпай жаңа пәтершіге жүгіреді")}</button>
+        <button type="button" class="qr" data-m="tenant"><strong class="cmd">«${L("Квартирант!", "Пәтерші!")}»</strong>${L("Квартиры стоят. Квартиранты перебегают в другую квартиру", "Пәтерлер тұрады. Пәтершілер басқа пәтерге ауысады")}</button>
+        <button type="button" class="qr" data-m="all"><strong class="cmd">«${L("Землетрясение!", "Жер сілкінісі!")}»</strong>${L("Все разбегаются и меняются ролями: новые тройки, новые квартиры", "Бәрі тарап, рөл ауыстырады: жаңа үштік, жаңа пәтер")}</button>
+      </div>
+    </div>
+  </div>`,
+  notes: `<p><b>РАЗМИНКА (5 мин).</b> Середина выступления — самое время встать. «Все выходим в центр зала. Две короткие игры, потом вернёмся к задачам у доски».</p>
+  <p><b>Игра 1 — «Молекула».</b> Пока звучит музыка (любая с телефона — или просто хлопайте), все свободно ходят по залу. Музыка стихла — нажимаете «🎲 Число», и все быстро собираются в группы по столько человек. Четыре раунда; <b>четвёртое число всегда 3</b> — так зал сам разбивается на тройки для второй игры.</p>
+  <p><b>Игра 2 — «Землетрясение».</b> Нажимайте «▶ Новая игра» по шагам: тройка → двое крайних поднимают руки и берутся за ладони над головой (квартира) → третий встаёт между ними (квартирант). Дальше по одной открываются три команды; нажатие на команду ещё раз показывает, кто бежит.</p>
+  <p class="do">Ведущий громко выкрикивает одну из команд: «Квартира!» — бегут пары, не разнимая рук; «Квартирант!» — бегут жильцы; «Землетрясение!» — все разбегаются и строят новые тройки, роли меняются (кто был квартирой — становится квартирантом и наоборот).</p>
+  <p><b>Секрет игры:</b> ведущий тоже бежит занимать место — поэтому <b>один человек всегда остаётся лишним</b>. Он и становится новым ведущим и выкрикивает следующую команду. На экране этого нет — объявите устно.</p>
+  <p class="q">После игры: «Что вы сейчас делали? — Слушали правило, мгновенно решали, куда бежать, договаривались без слов. Это та же логика, только телом. С детьми — на перемене или в начале урока».</p>`,
+  init(s) {
+    // Молекула: 4 случайных числа 1–10 (без повторов подряд), четвёртое всегда 3
+    const mol = $(".mol", s), box = $(".molnum", s), num = $(".molnum b", s), dots = $$(".molrounds i", s), roll = $(".roll", s);
+    let r = 0, last = 0;
+    roll.onclick = () => {
+      if (r >= 4) { r = last = 0; num.textContent = "?"; dots.forEach(d => d.classList.remove("on")); mol.classList.remove("done"); roll.innerHTML = `🎲 ${L("Число", "Сан")}`; return; }
+      let n; do n = 1 + Math.floor(Math.random() * 10); while (n === last || n === 3);
+      if (r === 3) n = 3;
+      last = n; dots[r++].classList.add("on"); num.textContent = n;
+      box.classList.remove("pop"); void box.offsetWidth; box.classList.add("pop");
+      if (r === 4) { mol.classList.add("done"); roll.innerHTML = `↺ ${L("Сначала", "Басынан")}`; $(".qnext", s).classList.add("pulse"); }
+    };
+    // Землетрясение: шаги 1–3 рисуют тройку, шаги 4–6 открывают команды
+    const st = $(".qstage", s), next = $(".qnext", s), steps = $$(".qs", s), rules = $$(".qr", s);
+    let k = 0;
+    const play = m => { st.classList.remove("mv-house", "mv-tenant", "mv-all"); void st.getBBox(); st.classList.add("mv-" + m); };
+    const set = () => {
+      st.dataset.k = Math.min(k, 3);
+      steps.forEach((x, i) => x.classList.toggle("on", i < k));
+      rules.forEach((x, i) => x.classList.toggle("on", i < k - 3));
+      next.innerHTML = k === 0 ? `▶ ${L("Новая игра", "Жаңа ойын")}` : k < 6 ? `→ ${L("Дальше", "Әрі қарай")}` : `↺ ${L("Сначала", "Басынан")}`;
+    };
+    next.onclick = () => {
+      next.classList.remove("pulse");
+      if (k >= 6) { k = 0; st.classList.remove("mv-house", "mv-tenant", "mv-all"); } else k++;
+      set(); if (k > 3) play(rules[k - 4].dataset.m);
+    };
+    rules.forEach(b => b.onclick = () => { if (b.classList.contains("on")) play(b.dataset.m); });
+    set();
+  },
+});
+
 /* ---------- 8. УЧИМСЯ: пример короткого объяснения ---------- */
 SLIDES.push({
   sec: 2, theme: "paper", time: "3 мин", top: true,
