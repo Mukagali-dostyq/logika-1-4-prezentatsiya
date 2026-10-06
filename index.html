@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Логика 1–4 — презентация для учителей</title>
+<meta name="description" content="Веб-презентация проекта «Логика 1–4» для учителей начальных классов: живые задачи, заметки докладчика (N), сценарий (P).">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/fonts.css?v=5">
+<link rel="stylesheet" href="assets/css/style.css?v=5">
+<link rel="stylesheet" href="assets/css/site.css?v=5">
+<link rel="stylesheet" href="deck.css?v=5">
+</head>
+<body>
+<div id="app">
+  <header class="dtop"><a class="brand" href="https://mukagali-dostyq.github.io/logika-1-4/"><span>Логика <i>1–4</i></span></a><nav class="secnav"></nav>
+    <button class="notebtn" type="button" title="N — заметки, P — сценарий, F — весь экран, Esc — все экраны">N · <span class="ru">заметки</span><span class="kz">жазбалар</span></button><div class="counter"></div>
+    <div class="lang-switch"><button data-l="ru">RU</button><button data-l="kz">ҚАЗ</button></div><div class="progress"></div></header>
+  <main class="deck"></main>
+  <button class="nav prev" aria-label="Назад">‹</button><button class="nav next" aria-label="Вперёд">›</button>
+</div>
+<aside id="notes"></aside>
+<div id="grid"></div>
+<div id="conspect"></div>
+<script>window.NO_PREMIUM = false;</script>
+<script src="assets/js/core.js?v=5"></script>
+<script src="assets/js/shapes.js?v=5"></script>
+<script src="assets/js/taskkit.js?v=5"></script>
+<script src="assets/js/curriculum.js?v=5"></script>
+<script src="assets/js/player.js?v=5"></script>
+<script src="assets/js/tasks/t_classify.js?v=5"></script>
+<script src="assets/js/tasks/t_patterns.js?v=5"></script>
+<script src="assets/js/meta.js?v=5"></script>
+<script src="assets/js/config.js?v=5"></script>
+<script src="assets/vendor/supabase.js?v=5"></script>
+<script src="assets/js/auth.js?v=5"></script>
+<script src="deck.js?v=5"></script>
+<script src="slides.js?v=5"></script>
+<script>(async () => { try { await Promise.race([accessInit(), sleep(8000)]); } catch (e) { console.warn(e); } injectDefs(); buildDeck(); initLang(); initNav(); })();</script>
+</body>
+</html>
